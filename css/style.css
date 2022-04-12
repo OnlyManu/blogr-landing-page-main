@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Overpass";
+    src: url("../fonts/Overpass-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf");
+}
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    --var-cta-text-light-red: hsl(356, 100%, 66%);
+    --var-cta-hover-very-light-red: hsl(355, 100%, 74%);
+    --var-headings-very-dark-blue: hsl(208, 49%, 24%);
+    --var-text-white: hsl(0, 0%, 100%);
+    --var-footer-text-grayish-blue: hsl(240, 2%, 79%);
+    --var-body-copy-very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --var-footer-background-very-dark-black-blue: hsl(240, 10%, 16%);
+    --var-gradient-cta-very-light-red: hsl(13, 100%, 72%);
+    --var-gradient-cta-light-red: hsl(353, 100%, 62%);
+    --var-gradient-body-very-dark-gray-blue: hsl(237, 17%, 21%);
+    --var-gradient-body-very-dark-desaturated-blue: hsl(240, 12%, 17%);
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: Overpass;
+    font-size: 16px;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 4% 10% 6% 10%;
+    background-image:linear-gradient(to right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
+    background-size: cover;
+    border-radius: 0 0 0 10%;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: var(--var-text-white);
+}
+.nav-item-name{
+    font-size: 0.8rem;
+    font-weight:400;
+    font-family: Ubuntu;
+}
+.nav-item-dropdown{
+    display: none;
+    position: absolute;
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
