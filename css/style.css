@@ -227,3 +227,40 @@ main{
 .illustration-3 img{
     transform: translateX(-28.5%);
 }
+.footer{
+    width: 100%;
+    background-color: var(--var-footer-background-very-dark-black-blue);
+    padding-left: 12vw;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    border-radius: 0 6rem 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 12rem;
+    flex-wrap: wrap;
+}
+.footer-navbar{
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+.footer-nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-nav-item{
+    font-size: 1rem;
+    color: var(--var-text-white);
+}
+.footer-nav-link{
+    text-decoration: none;
+    color: var(--var-footer-text-grayish-blue);
+}
