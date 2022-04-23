@@ -11,73 +11,74 @@
   <title>Frontend Mentor | [Blogr]</title>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="navigation">
-        <div class="name">
-          <img src="images/logo.svg" alt="logo">
-        </div>
-        <nav>
-          <div class="nav-items">
-            <div class="nav-item">
-              <div class="nav-item-name">Products <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-              <ul class="nav-item-dropdown">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Integrations</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <div class="nav-item-name">Company <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-              <ul class="nav-item-dropdown">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
-              </ul>
-            </div>
-            <div class="nav-item">
-              <div class="nav-item-name">Connect <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-              <ul class="nav-item-dropdown">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">LinkedIn</a></li>
-              </ul>
-            </div>
+  <div class="container">
+    <header>
+      <div class="navbar">
+        <div class="navigation">
+          <div class="name">
+            <img src="images/logo.svg" alt="logo">
           </div>
-        </nav>
+          <nav>
+            <div class="nav-items">
+              <div class="nav-item">
+                <div class="nav-item-name">Products <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
+                <ul class="nav-item-dropdown">
+                  <li><a href="#">Overview</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Marketplace</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Integrations</a></li>
+                </ul>
+              </div>
+              <div class="nav-item">
+                <div class="nav-item-name">Company <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
+                <ul class="nav-item-dropdown">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+              </div>
+              <div class="nav-item">
+                <div class="nav-item-name">Connect <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
+                <ul class="nav-item-dropdown">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Newsletter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="register">
+          <button class="button-register button-simple">Login</button>
+          <button class="button-register button-white">Sign Up</button>
+        </div>
       </div>
-      <div class="register">
-        <button class="button-register button-simple">Login</button>
-        <button class="button-register button-white">Sign Up</button>
+      <div class="banner">
+        <div class="banner-text">
+          <h1 class="banner-text-heading">A modern publishing platform</h1>
+          <span class="banner-text-description">Grow your audience and build your online brand</span>
+        </div>
+        <div class="banner-buttons">
+          <button class="button-banner button-white">Start for Free</button>
+          <button class="button-banner button-simple">Learn More</button>
+        </div>
       </div>
-    </div>
-    <div class="banner">
-      <div class="banner-text">
-        <h1 class="banner-text-heading">A modern publishing platform</h1>
-        <span class="banner-text-description">Grow your audience and build your online brand</span>
-      </div>
-      <div class="banner-buttons">
-        <button class="button-banner button-white">Start for Free</button>
-        <button class="button-banner button-simple">Learn More</button>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section>
-        <div>
-          <div>
-            <h3>Introducing an extensible editor</h3>
-            <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+    </header>
+    <main>
+      <section class="attributes-bloc bloc-1">
+        <div class="attributes">
+          <div class="attribute">
+            <h3 class="attribute-heading">Introducing an extensible editor</h3>
+            <p class="attribute-description">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
               The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
               videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
               change the looks of a blog.</p>
           </div>
-          <div>
-            <h3>Robust content management</h3>
-            <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          <div class="attribute">
+            <h3 class="attribute-heading">Robust content management</h3>
+            <p class="attribute-description">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
               by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
           </div>
         </div>
@@ -85,74 +86,77 @@
           <picture>
             <source media="(min-width: 668px)" srcset="images/illustration-editor-desktop.svg">
             <source media="(max-width: 667px)" srcset="images/illustration-editor-mobile.svg">
-            <img src="images/illustration-editor-desktop.svg" alt="illustration editor">
+            <img class="illustration-1" src="images/illustration-editor-desktop.svg" alt="illustration editor">
           </picture>
         </div>
-    </section>
-    <section>
-      <div>
-        <img src="images/illustration-phones.svg" alt="illustration phones">
-      </div>
-      <div>
-        <h3>State of the Art Infrastructure</h3>
-        <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
-      </div>
-    </section>
-    <section>
-      <div>
-        <picture>
-          <source media="(min-width: 668px)" srcset="images/illustration-laptop-desktop.svg">
-            <source media="(max-width: 667px)" srcset="images/illustration-laptop-mobile.svg">
-            <img src="images/illustration-laptop-desktop.svg" alt="illustration laptop">
-        </picture>
-      </div>
+      </section>
+      <section class="attributes-bloc bloc-2">
+        <div class="illustration-2">
+          <img src="images/illustration-phones.svg" class="phones" alt="phones illustration">
+        </div>
+        <div class="attributes">
+          <div class="attribute">
+            <h3 class="attribute-heading">State of the Art Infrastructure</h3>
+            <p class="attribute-description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+              This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+          </div>
+        </div>
+      </section>
+      <section class="attributes-bloc bloc-3">
+        <div class="illustration-3">
+          <picture>
+            <source media="(min-width: 668px)" srcset="images/illustration-laptop-desktop.svg">
+              <source media="(max-width: 667px)" srcset="images/illustration-laptop-mobile.svg">
+              <img src="images/illustration-laptop-desktop.svg" alt="illustration laptop">
+          </picture>
+        </div>
+        <div class="attributes">
+          <div class="attribute">
+            <h3 class="attribute-heading">Free, open, simple</h3>
+            <p class="attribute-description">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          </div>
+          <div class="attribute">
+            <h3 class="attribute-heading">Powerful tooling</h3>
+            <p class="attribute-description">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="images/logo.svg" alt="logo">
       <div>
         <div>
-          <h3>Free, open, simple</h3>
-          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          <span>Product</span>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
         </div>
         <div>
-          <h3>Powerful tooling</h3>
-          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-            capable of producing even the most complicated sites.</p>
+          <span>Company</span>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <span>Connect</span>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <img src="images/logo.svg" alt="logo">
-    <div>
-      <div>
-        <span>Product</span>
-        <ul>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Integrations</a></li>
-        </ul>
-      </div>
-      <div>
-        <span>Company</span>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-      <div>
-        <span>Connect</span>
-        <ul>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
