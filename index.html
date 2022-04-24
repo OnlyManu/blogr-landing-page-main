@@ -13,7 +13,12 @@
 <body>
   <div class="container">
     <header>
-      <div class="navbar">
+      <picture class="header-background">
+        <source media="(min-width: 668px)" srcset="images/bg-pattern-intro-desktop.svg">
+        <source media="(max-width: 667px)" srcset="images/bg-pattern-intro-mobile.svg">
+        <img src="images/bg-pattern-intro-desktop.svg" alt="header background">
+      </picture>
+      <div class="navbar">        
         <div class="navigation">
           <div class="name">
             <img src="images/logo.svg" alt="logo">
@@ -90,15 +95,20 @@
           </picture>
         </div>
       </section>
-      <section class="attributes-bloc bloc-2">
-        <div class="illustration-2">
-          <img src="images/illustration-phones.svg" class="phones" alt="phones illustration">
+      <section class="bloc-2">
+        <div class="background">
+          <img src="images/bg-pattern-circles.svg" class="bloc-2-background" alt="bloc-2 background">
         </div>
-        <div class="attributes">
-          <div class="attribute">
-            <h3 class="attribute-heading">State of the Art Infrastructure</h3>
-            <p class="attribute-description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-              This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        <div class="attributes-bloc">
+          <div class="illustration-2">
+            <img src="images/illustration-phones.svg" class="phones" alt="phones illustration">
+          </div>
+          <div class="attributes">
+            <div class="attribute">
+              <h3 class="attribute-heading">State of the Art Infrastructure</h3>
+              <p class="attribute-description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+                This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+            </div>
           </div>
         </div>
       </section>

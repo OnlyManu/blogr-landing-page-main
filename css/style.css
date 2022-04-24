@@ -17,6 +17,7 @@ body{
     --var-cta-hover-very-light-red: hsl(355, 100%, 74%);
     --var-headings-very-dark-blue: hsl(208, 49%, 24%);
     --var-text-white: hsl(0, 0%, 100%);
+    --var-text-white-transparent: hsla(0, 0%, 100%, 65%);
     --var-footer-text-grayish-blue: hsl(240, 2%, 79%);
     --var-body-copy-very-dark-grayish-blue: hsl(207, 13%, 34%);
     --var-footer-background-very-dark-black-blue: hsl(240, 10%, 16%);
@@ -35,6 +36,7 @@ body{
     width: 100%;
 }
 header{
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-left: 12vw;
@@ -43,6 +45,19 @@ header{
     background-image:linear-gradient(to right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
     background-size: cover;
     border-radius: 0 0 0 5rem;
+    overflow: hidden;
+}
+.navbar, .register, .banner{
+    z-index: 1;
+}
+.header-background{
+    right: 0;
+    top: 50%;
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: auto;
+    transform: translateY(-50%) translateX(-50%);
 }
 .navbar{
     display: flex;
@@ -67,6 +82,7 @@ header{
     font-size: 0.8rem;
     font-weight:400;
     font-family: Ubuntu;
+    color: var(--var-text-white-transparent);
 }
 .nav-item-dropdown{
     display: none;
@@ -111,8 +127,9 @@ header{
     font-weight: 500;
 }
 .banner-text-description{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
+    color: var(--var-text-white-transparent);
 }
 .banner-buttons{
     display: flex;
@@ -190,6 +207,22 @@ main{
     border-radius: 0 6rem 0 8rem;
     padding-top: 7rem;
     padding-bottom: 7rem;
+}
+.bloc-2 .attributes-bloc{
+    overflow: visible;
+}
+.bloc-2 .background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(-50%);
+    border-radius: 0 6rem 0 8rem;
+}
+.bloc-2-background{
+    transform: translateY(-50%) translateX(-23%);
 }
 .bloc-2 .attributes{
     padding-right: 12vw;
