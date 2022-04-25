@@ -17,7 +17,7 @@ body{
     --var-cta-hover-very-light-red: hsl(355, 100%, 74%);
     --var-headings-very-dark-blue: hsl(208, 49%, 24%);
     --var-text-white: hsl(0, 0%, 100%);
-    --var-text-white-transparent: hsla(0, 0%, 100%, 65%);
+    --var-text-white-transparent: hsla(0, 0%, 100%, 68%);
     --var-footer-text-grayish-blue: hsl(240, 2%, 79%);
     --var-body-copy-very-dark-grayish-blue: hsl(207, 13%, 34%);
     --var-footer-background-very-dark-black-blue: hsl(240, 10%, 16%);
@@ -103,6 +103,7 @@ header{
 }
 .button-register.button-simple{
     font-size: 1rem;
+    color: var(--var-text-white-transparent);
 }
 .button-register.button-white{
     font-size: 0.9rem;
@@ -149,15 +150,24 @@ button{
     text-align: center;
     font-weight: 600;
 }
+.button-white:hover{
+    background-color: var(--var-cta-hover-very-light-red);
+    color: var(--var-text-white);
+}
 .button-simple{
     background-color: transparent;
     color: var(--var-text-white)
 }
 .button-banner{
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 1.6rem;
 }
 .button-banner.button-simple{
+    border: 1px solid var(--var-text-white-transparent);
+}
+.button-banner.button-simple:hover{
+    color: var(--var-cta-text-light-red);
+    background-color: var(--var-text-white);
     border: 1px solid var(--var-text-white);
 }
 main{
