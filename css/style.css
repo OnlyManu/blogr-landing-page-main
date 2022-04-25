@@ -51,13 +51,13 @@ header{
     z-index: 1;
 }
 .header-background{
-    right: 0;
+    left: 0;
     top: 50%;
     position: absolute;
     z-index: 0;
     width: 100vw;
     height: auto;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-30%);
 }
 .navbar{
     display: flex;
@@ -203,8 +203,6 @@ main{
 .bloc-2{
     position: relative;
     overflow: visible;
-    background-image: linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));
-    border-radius: 0 6rem 0 8rem;
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
@@ -219,6 +217,7 @@ main{
     z-index: 1;
     overflow: hidden;
     transform: translateY(-50%);
+    background-image: linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));
     border-radius: 0 6rem 0 8rem;
 }
 .bloc-2-background{
