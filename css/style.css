@@ -6,13 +6,7 @@
     font-family: "Ubuntu";
     src: url("../fonts/Ubuntu-Regular.ttf");
 }
-html{
-    box-sizing: border-box;
-}
-*, *::before, *::after{
-    box-sizing: inherit;
-}
-body{
+:root{
     --var-cta-text-light-red: hsl(356, 100%, 66%);
     --var-cta-hover-very-light-red: hsl(355, 100%, 74%);
     --var-headings-very-dark-blue: hsl(208, 49%, 24%);
@@ -25,8 +19,14 @@ body{
     --var-gradient-cta-light-red: hsl(353, 100%, 62%);
     --var-gradient-body-very-dark-gray-blue: hsl(237, 17%, 21%);
     --var-gradient-body-very-dark-desaturated-blue: hsl(237, 23%, 32%);
-    
-
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
     font-family: Overpass;
     font-size: 16px;
 }
@@ -36,57 +36,88 @@ body{
     width: 100%;
 }
 header{
-    position: relative;
     display: flex;
     flex-direction: column;
     padding-left: 12vw;
     padding-right: 12vw;
     padding-top: 5rem;
-    background-image:linear-gradient(to right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
-    background-size: cover;
+    background:url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
+    background-repeat: no-repeat;
+    background-position: 25%;
     border-radius: 0 0 0 5rem;
     overflow: hidden;
 }
-.navbar, .register, .banner{
-    z-index: 1;
-}
-.header-background{
-    left: 0;
-    top: 50%;
-    position: absolute;
-    z-index: 0;
-    width: 100vw;
-    height: auto;
-    transform: translateY(-50%) translateX(-30%);
+.navbar{
+    z-index: 3;
 }
 .navbar{
     display: flex;
     flex-direction: row;
+    gap: 3.5rem;
     align-items: center;
-    justify-content: space-between;
     padding-bottom: 8rem;
     width: 100%;
 }
 .navigation{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    justify-content: space-between;
+    width: 100%;
 }
 .nav-items{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     color: var(--var-text-white);
 }
-.nav-item-name{
+.nav-item{
+    position: relative;
     font-size: 0.8rem;
-    font-weight:400;
+    font-weight:700;
     font-family: Ubuntu;
+    color: var(--var-text-white-transparent);
+}
+.nav-item>a{
+    text-decoration: none;
     color: var(--var-text-white-transparent);
 }
 .nav-item-dropdown{
     display: none;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.1rem;
+    width: 155px;
+    background-color: var(--var-text-white);
+    color: hsl(0, 0%, 0%);
+    padding: 2rem 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+.links li:hover a{
+    font-weight: 700;
+}
+.nav-item:hover>a{
+    color: var(--var-text-white);
+    text-decoration: underline;
+    font-weight: 700;
+}
+.nav-item:hover picture img{
+    transform: rotate(180deg);
+}
+.nav-item:hover .nav-item-dropdown{
     position: absolute;
+    display: block;
+    transform: translateX(-1.5rem);
+    background-color: transparent;
+    padding-top: 1.6rem;
 }
 .register{
     align-self: stretch;
@@ -97,15 +128,15 @@ header{
 }
 .button-register{
     padding: 0 2rem;
-    text-align: center;
-    vertical-align: middle;
     border-radius: 1.5rem;
 }
 .button-register.button-simple{
     font-size: 1rem;
+    font-weight: 700;
     color: var(--var-text-white-transparent);
 }
 .button-register.button-white{
+    width: 7.5rem;
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -113,7 +144,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 12rem;
+    padding-bottom: 10rem;
     gap: 3rem;
 }
 .banner-text{
@@ -124,7 +155,7 @@ header{
     gap: 0.5rem;
 }
 .banner-text-heading{
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 500;
 }
 .banner-text-description{
@@ -215,29 +246,16 @@ main{
     overflow: visible;
     padding-top: 7rem;
     padding-bottom: 7rem;
+    background: url(../images/bg-pattern-circles.svg), linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));;
+    background-repeat: no-repeat;
+    background-position: -52% 85%;
+    border-radius: 0 6rem 0 8rem;
 }
 .bloc-2 .attributes-bloc{
     overflow: visible;
 }
-.bloc-2 .background{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 50%;
-    z-index: 1;
-    overflow: hidden;
-    transform: translateY(-50%);
-    background-image: linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));
-    border-radius: 0 6rem 0 8rem;
-}
-.bloc-2-background{
-    transform: translateY(-50%) translateX(-23%);
-}
 .bloc-2 .attributes{
     padding-right: 12vw;
-}
-.bloc-2 .attributes, .bloc-2 .illustration-2{
-    z-index: 2;
 }
 .illustration-2{
     position: relative;
@@ -305,4 +323,7 @@ main{
 .footer-nav-link{
     text-decoration: none;
     color: var(--var-footer-text-grayish-blue);
+}
+.footer-nav-link:hover{
+    text-decoration: underline;
 }

@@ -13,46 +13,68 @@
 <body>
   <div class="container">
     <header>
-      <picture class="header-background">
-        <source media="(min-width: 668px)" srcset="images/bg-pattern-intro-desktop.svg">
-        <source media="(max-width: 667px)" srcset="images/bg-pattern-intro-mobile.svg">
-        <img src="images/bg-pattern-intro-desktop.svg" alt="header background">
-      </picture>
       <div class="navbar">        
+        <div class="name">
+          <img src="images/logo.svg" alt="logo">
+        </div>
         <div class="navigation">
-          <div class="name">
-            <img src="images/logo.svg" alt="logo">
-          </div>
           <nav>
-            <div class="nav-items">
-              <div class="nav-item">
-                <div class="nav-item-name">Products <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-                <ul class="nav-item-dropdown">
-                  <li><a href="#">Overview</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Marketplace</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Integrations</a></li>
-                </ul>
-              </div>
-              <div class="nav-item">
-                <div class="nav-item-name">Company <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-                <ul class="nav-item-dropdown">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div>
-              <div class="nav-item">
-                <div class="nav-item-name">Connect <span class="nav-item-name-icon"><img src="images/icon-arrow-light.svg" alt="icon arrow"></span></div>
-                <ul class="nav-item-dropdown">
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Newsletter</a></li>
-                  <li><a href="#">LinkedIn</a></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="nav-items">
+              <li class="nav-item">
+                <a href="#">
+                  Product
+                  <picture>
+                    <source media="(min-width: 668px)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 667px)" srcset="images/icon-arrow-dark.svg">
+                    <img src="images/icon-arrow-light.svg" alt="icon arrow">
+                  </picture>
+                </a>
+                <div class="nav-item-dropdown">
+                  <ul class="links">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Integrations</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  Company
+                  <picture>
+                    <source media="(min-width: 668px)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 667px)" srcset="images/icon-arrow-dark.svg">
+                    <img src="images/icon-arrow-light.svg" alt="icon arrow">
+                  </picture>
+                </a>
+                <div class="nav-item-dropdown">
+                  <ul class="links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#">
+                  Connect
+                  <picture>
+                    <source media="(min-width: 668px)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 667px)" srcset="images/icon-arrow-dark.svg">
+                    <img src="images/icon-arrow-light.svg" alt="icon arrow">
+                  </picture>
+                </a>
+                <div class="nav-item-dropdown">
+                  <ul class="links">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </nav>
         </div>
         <div class="register">
@@ -96,9 +118,6 @@
         </div>
       </section>
       <section class="bloc-2">
-        <div class="background">
-          <img src="images/bg-pattern-circles.svg" class="bloc-2-background" alt="bloc-2 background">
-        </div>
         <div class="attributes-bloc">
           <div class="illustration-2">
             <img src="images/illustration-phones.svg" class="phones" alt="phones illustration">
@@ -169,6 +188,6 @@
       </div>
       </div>
     </footer>
-  </div>
+  </header>
 </body>
 </html>
