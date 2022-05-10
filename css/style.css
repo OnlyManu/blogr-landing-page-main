@@ -19,6 +19,8 @@
     --var-gradient-cta-light-red: hsl(353, 100%, 62%);
     --var-gradient-body-very-dark-gray-blue: hsl(237, 17%, 21%);
     --var-gradient-body-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    --var-margin-desktop: 12vw;
+    --var-margin-mobile: 6vw;
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -38,32 +40,18 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    padding-left: 12vw;
-    padding-right: 12vw;
-    padding-top: 5rem;
+    padding-left: var(--var-margin-desktop);
+    padding-right: var(--var-margin-desktop);
     background:url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
     background-repeat: no-repeat;
     background-position: 25%;
     border-radius: 0 0 0 5rem;
-    overflow: hidden;
 }
 .navbar{
-    z-index: 3;
-}
-.navbar{
-    display: flex;
-    flex-direction: row;
-    gap: 3.5rem;
-    align-items: center;
-    padding-bottom: 8rem;
     width: 100%;
 }
-.navigation{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+.mobile-menu{
+    display: none;
 }
 .nav-items{
     display: flex;
@@ -157,15 +145,6 @@ header{
     color: var(--var-text-white);
     gap: 0.5rem;
 }
-.banner-text-heading{
-    font-size: 3.8rem;
-    font-weight: 500;
-}
-.banner-text-description{
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--var-text-white-transparent);
-}
 .banner-buttons{
     display: flex;
     flex-direction: row;
@@ -238,12 +217,7 @@ main{
     align-items: center;
     overflow: hidden;
 }
-.bloc-1 .attributes{
-    padding-left: 12vw;
-}
-.illustration-1{
-    transform: translateX(8%); 
-}
+
 .bloc-2{
     position: relative;
     overflow: visible;
@@ -253,18 +227,7 @@ main{
     background-repeat: no-repeat;
     background-position: -52% 85%;
     border-radius: 0 6rem 0 8rem;
-}
-.bloc-2 .attributes-bloc{
     overflow: visible;
-}
-.bloc-2 .attributes{
-    padding-right: 12vw;
-}
-.illustration-2{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
 }
 .phones{
     margin-left: 12vw;
@@ -279,16 +242,6 @@ main{
 }
 .bloc-2 .attribute-description{
     color: var(--var-text-white);
-}
-.bloc-3 .attributes{
-    padding-right: 12vw;
-}
-.illustration-3{
-    display: flex;
-    justify-content: flex-start;
-}
-.illustration-3 img{
-    transform: translateX(-28.5%);
 }
 .footer{
     width: 100%;
@@ -329,4 +282,99 @@ main{
 }
 .footer-nav-link:hover{
     text-decoration: underline;
+}
+@media screen and (min-width: 668px) {
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        gap: 3.5rem;
+        align-items: center;
+        padding-bottom: 8rem;
+        padding-top: 5rem;
+        z-index: 3;
+    }
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        align-self: stretch;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .banner-text-heading{
+        font-size: 3.8rem;
+        font-weight: 500;
+    }
+    .banner-text-description{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--var-text-white-transparent);
+    }
+    .bloc-1 .attributes{
+        padding-left: var(--var-margin-desktop);
+    }
+    .illustration-1{
+        transform: translateX(8%); 
+    }
+    .bloc-2 .attributes{
+        padding-right: var(--var-margin-desktop);
+    }
+    .illustration-2{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        overflow: visible;
+    }
+    .illustration-3{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .bloc-3 .attributes{
+        padding-right: var(--var-margin-desktop);
+    }
+    .illustration-3 img{
+        transform: translateX(-28.5%);
+    }
+}
+@media screen and (max-width: 667px) {
+    header{
+        padding-right: var(--var-margin-mobile);
+        padding-left: var(--var-margin-mobile);
+        background:url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
+        background-repeat: no-repeat;
+        background-position: 34% 34%;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+    .navbar-mobile{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobile-menu{
+        display: inherit;
+    }
+    .navigation{
+        display: none;
+    }
+    .banner-text{
+        gap: 1.5rem;
+    }
+    .banner-text-heading{
+        font-size: 2.3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .banner-text-description{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--var-text-white-transparent);
+        text-align: center;
+    }   
 }
