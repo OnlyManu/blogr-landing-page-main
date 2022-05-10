@@ -78,6 +78,9 @@ header{
     font-family: Ubuntu;
     color: var(--var-text-white-transparent);
 }
+.nav-item img{
+    margin-left: 4px;
+}
 .nav-item>a{
     text-decoration: none;
     color: var(--var-text-white-transparent);
@@ -97,7 +100,7 @@ header{
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
 }
 .links a{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     text-decoration: none;
 }
