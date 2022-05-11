@@ -200,7 +200,7 @@ main{
     flex-direction: column;
     gap: 1.5rem;
 }
-.attribute-heading{
+.attribute-heading, .attributes-heading{
     font-size: 1.9rem;
     font-weight: 600;
     color: var(--var-headings-very-dark-blue);
@@ -211,13 +211,6 @@ main{
     color: var(--var-body-copy-very-dark-grayish-blue);
     line-height: 1.9rem;
 }
-.attributes-bloc{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    overflow: hidden;
-}
-
 .bloc-2{
     position: relative;
     overflow: visible;
@@ -227,14 +220,7 @@ main{
     background-repeat: no-repeat;
     background-position: -52% 85%;
     border-radius: 0 6rem 0 8rem;
-    overflow: visible;
-}
-.phones{
-    margin-left: 12vw;
-    transform: translateX(-40px) translateY(-30%);
-    position: absolute;
-    width: 552px;
-    height: 579px;
+    overflow: visible !important;
 }
 .bloc-2 .attribute-heading{
     font-size: 2.4rem;
@@ -310,6 +296,22 @@ main{
         font-weight: 400;
         color: var(--var-text-white-transparent);
     }
+    .attributes-bloc{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        overflow: hidden;
+    }
+    .bloc-1{
+        position: relative;
+    }
+    .attributes-heading{
+        position: absolute;
+        font-size: 2rem;
+        left: 50%;
+        top: 8%;
+        transform: translateX(-50%);
+    }
     .bloc-1 .attributes{
         padding-left: var(--var-margin-desktop);
     }
@@ -325,6 +327,13 @@ main{
         flex-direction: row;
         height: 100%;
         overflow: visible;
+    }
+    .phones{
+        margin-left: 12vw;
+        transform: translateX(-40px) translateY(-30%);
+        position: absolute;
+        width: 552px;
+        height: 579px;
     }
     .illustration-3{
         display: flex;
@@ -366,6 +375,13 @@ main{
     .banner-text{
         gap: 1.5rem;
     }
+    .attributes{
+        gap: 3rem;
+    }
+    .attributes-heading{
+        order: -3;
+        text-align: center;
+    }
     .banner-text-heading{
         font-size: 2.3rem;
         font-weight: 500;
@@ -376,5 +392,38 @@ main{
         font-weight: 400;
         color: var(--var-text-white-transparent);
         text-align: center;
-    }   
+    }
+    .attributes-bloc{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding-left: var(--var-margin-mobile);
+        padding-right: var(--var-margin-mobile);
+        gap: 2rem;
+    }
+    .attribute-heading{
+        text-align: center;
+    }
+    .attribute-description{
+        text-align: center;
+    }
+    .illustration{
+        display: flex;
+        justify-content: center;
+        order: -2;
+    }
+    .bloc-2{
+        margin-top: 50%;
+    }
+    .bloc-2 .attributes{
+        padding-top: 5rem;
+    }
+    .phones{
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%) translateY(-45%);
+    }
 }
