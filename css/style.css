@@ -216,9 +216,6 @@ main{
     overflow: visible;
     padding-top: 7rem;
     padding-bottom: 7rem;
-    background: url(../images/bg-pattern-circles.svg), linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));;
-    background-repeat: no-repeat;
-    background-position: -52% 85%;
     border-radius: 0 6rem 0 8rem;
     overflow: visible !important;
 }
@@ -232,7 +229,7 @@ main{
 .footer{
     width: 100%;
     background-color: var(--var-footer-background-very-dark-black-blue);
-    padding-left: 12vw;
+    padding-left: var(--var-margin-desktop);
     padding-top: 6rem;
     padding-bottom: 7rem;
     border-radius: 0 6rem 0 0;
@@ -317,6 +314,11 @@ main{
     }
     .illustration-1{
         transform: translateX(8%); 
+    }
+    .bloc-2{
+        background: url(../images/bg-pattern-circles.svg), linear-gradient(40deg, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));;
+        background-repeat: no-repeat;
+        background-position: -52% 85%;
     }
     .bloc-2 .attributes{
         padding-right: var(--var-margin-desktop);
@@ -414,6 +416,10 @@ main{
     }
     .bloc-2{
         margin-top: 50%;
+        background: url(../images/bg-pattern-circles.svg), linear-gradient(to bottom, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));;
+        background-repeat: no-repeat;
+        background-size: 155vw;
+        background-position: 50% -650%;
     }
     .bloc-2 .attributes{
         padding-top: 5rem;
@@ -425,5 +431,23 @@ main{
         left: 50%;
         top: 0;
         transform: translateX(-50%) translateY(-45%);
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        gap: 4rem;
+    }
+    .footer-navbar{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .footer-nav{
+        align-items: center;
+        gap: 2rem;
+    }
+    .footer-nav ul{
+        align-items: center;
     }
 }
