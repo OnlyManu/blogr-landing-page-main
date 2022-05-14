@@ -10,9 +10,11 @@
     --var-cta-text-light-red: hsl(356, 100%, 66%);
     --var-cta-hover-very-light-red: hsl(355, 100%, 74%);
     --var-headings-very-dark-blue: hsl(208, 49%, 24%);
+    --var-headings-very-dark-blue-trans: hsla(208, 49%, 24%, 80%);
     --var-text-white: hsl(0, 0%, 100%);
     --var-text-white-transparent: hsla(0, 0%, 100%, 68%);
     --var-footer-text-grayish-blue: hsl(240, 2%, 79%);
+    --var-footer-text-grayish-blue-trans: hsla(240, 2%, 79%, 50%);
     --var-body-copy-very-dark-grayish-blue: hsl(207, 13%, 34%);
     --var-footer-background-very-dark-black-blue: hsl(240, 10%, 16%);
     --var-gradient-cta-very-light-red: hsl(13, 100%, 72%);
@@ -69,7 +71,7 @@ header{
 .nav-item img{
     margin-left: 4px;
 }
-.nav-item>a{
+.link{
     text-decoration: none;
     color: var(--var-text-white-transparent);
 }
@@ -91,24 +93,6 @@ header{
     font-size: 0.9rem;
     font-weight: 400;
     text-decoration: none;
-}
-.links li:hover a{
-    font-weight: 700;
-}
-.nav-item:hover>a{
-    color: var(--var-text-white);
-    text-decoration: underline;
-    font-weight: 700;
-}
-.nav-item:hover picture img{
-    transform: rotate(180deg);
-}
-.nav-item:hover .nav-item-dropdown{
-    position: absolute;
-    display: block;
-    transform: translateX(-1.5rem);
-    background-color: transparent;
-    padding-top: 1.6rem;
 }
 .register{
     align-self: stretch;
@@ -274,6 +258,24 @@ main{
         justify-content: space-between;
         width: 100%;
     }
+    .nav-item:hover>.link{
+        color: var(--var-text-white);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+    .nav-item:hover picture img{
+        transform: rotate(180deg);
+    }
+    .nav-item:hover .nav-item-dropdown{
+        position: absolute;
+        display: block;
+        transform: translateX(-1.5rem);
+        background-color: transparent;
+        padding-top: 1.6rem;
+    }
+    .links li:hover a{
+        font-weight: 700;
+    }
     .button-register.button-simple{
         font-size: 1rem;
         font-weight: 700;
@@ -383,6 +385,10 @@ main{
         padding: 6vw;
         gap: 2rem;
         transform: translateY(5rem);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+    nav, .nav-items, .nav-item, .nav-item-dropdown{
+        width: 100%;
     }
     .nav-items{
         display: flex;
@@ -390,9 +396,36 @@ main{
         align-items: center;
         gap: 2rem;
     }
-    .nav-item>a{
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .link{
         color: var(--var-headings-very-dark-blue);
         font-size: 1.1rem;
+    }
+    .nav-item.opened>.link{
+        color: var(--var-headings-very-dark-blue-trans);
+    }
+    .nav-item.opened picture img{
+        transform: rotate(180deg);
+    }
+    .nav-item-dropdown ul{
+        background-color: var(--var-footer-text-grayish-blue-trans);
+        width: 100%;
+        align-items: center;
+        box-shadow: none;
+    }
+    .nav-item-dropdown.opened{
+        display: flex;
+        position: inherit;
+        padding-top: 1.5rem;
+    }
+    .links a{
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--var-headings-very-dark-blue-trans);
     }
     .register{
         display: flex;
@@ -400,7 +433,7 @@ main{
         align-items: center;
         border-top: 1px solid var(--var-footer-text-grayish-blue);
         padding-top: 1.2rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
     }
     .button-register.button-simple{
         font-size: 1.1rem;
@@ -412,7 +445,7 @@ main{
     .button-register.button-white{
         color: var(--var-text-white);
         width: 7.5rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
         padding: 0.8rem;
         background: linear-gradient(to bottom right, var(--var-gradient-cta-very-light-red), var(--var-gradient-cta-light-red));
