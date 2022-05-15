@@ -52,7 +52,7 @@ header{
 .navbar{
     width: 100%;
 }
-.mobile-menu{
+.burger-menu{
     display: none;
 }
 .nav-items{
@@ -240,6 +240,11 @@ main{
 .footer-nav-link:hover{
     text-decoration: underline;
 }
+@media screen and (min-width: 668px) and (max-width: 1366px) {
+    .bloc-2 .attribute-heading{
+        font-size: 2.2rem !important;
+    }
+}
 @media screen and (min-width: 668px) {
     .navbar{
         display: flex;
@@ -371,10 +376,13 @@ main{
         align-items: center;
         justify-content: space-between;
     }
-    .mobile-menu{
+    .burger-menu{
         display: inherit;
     }
     .navigation{
+        display: none;
+    }
+    .navigation.opened{
         position:absolute;
         display: flex;
         flex-direction: column;
@@ -417,7 +425,7 @@ main{
         align-items: center;
         box-shadow: none;
     }
-    .nav-item-dropdown.opened{
+    .nav-item.opened .nav-item-dropdown{
         display: flex;
         position: inherit;
         padding-top: 1.5rem;
@@ -494,8 +502,8 @@ main{
         margin-top: 50%;
         background: url(../images/bg-pattern-circles.svg), linear-gradient(to bottom, var(--var-gradient-body-very-dark-gray-blue), var(--var-gradient-body-very-dark-desaturated-blue));;
         background-repeat: no-repeat;
-        background-size: 155vw;
-        background-position: 50% -650%;
+        background-size: 590px;
+        background-position: 50% -900%;
     }
     .bloc-2 .attributes{
         padding-top: 5rem;
